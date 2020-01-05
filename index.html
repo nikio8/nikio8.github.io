@@ -24,6 +24,14 @@
       $("#target3").addClass("bounce infinite delay-1s slow").removeClass("bounceInLeft");
     });
     </script>
+
+    <script>
+      function myFunction(elmnt,clr) {
+        elmnt.style.color = clr;
+      }
+    </script>
+
+
   </head>
 
 <style>
@@ -55,33 +63,33 @@
         <h2 class="text-primary text-center">Silver Surfer - test page</h2>
       </div>
       <div class="col-xs-4">
-        <a href="#"><img class="img-responsive thick-green-border" src="./files/silver1.jpg" alt="Silver surfer flying through space."></a>
+        <a href="#"><img class="img-responsive thick-green-border animated slow bounceInLeft" src="./files/silver1.jpg" alt="The Silver Surfer as depicted by the character's visual creators, Jack Kirby and Joe Sinnott, on the cover of Fantastic Four #72 (March 1968)."></a>
       </div>
     </div>
-    <img src="./files/silver_v_rune.jpg" class="img-responsive" alt="Silver Surfer v Rune.">
+    <img src="./files/silver_v_rune.jpg" class="img-responsive animated slow bounceInRight delay-2s" alt="Silver Surfer v Rune.">
     <br>
     <p>Buttons with Bootstrap css. Animated using javascript - jQuery, animate.css and font-awesome.css</p>
     <div class="row">
       <div class="col-xs-4">
-        <button class="btn btn-block btn-primary target"><i class="fa fa-thumbs-up"></i> Like</button>
+        <button class="btn btn-block btn-primary target" onclick="myFunction(this, 'black')" id="buttonLike"><i class="fa fa-thumbs-up"></i> Like</button>
       </div>
       <div class="col-xs-4">
         <button class="btn btn-block btn-info target"><i class="fa fa-info-circle"></i> Info</button>
       </div>
       <div class="col-xs-4">
-        <button class="btn btn-block btn-danger target"><i class="fa fa-trash"></i> Delete</button>
+        <button class="btn btn-block btn-danger target" onclick="alert('Delete. Are you sure?')"><i class="fa fa-trash"></i> Delete</button>
       </div>
     </div>
     <br>
     <p>List. Of things Silver Surfer <span class="text-danger">love:</span></p>
     <ul>
       <li>flying</li>
-      <li>surfing</li>
+      <li>planet Zenn-La</li>
       <li>freedom</li>
     </ul>
     <p>Bullet List. Top 3 things Silver Surfer hate:</p>
     <ol>
-      <li>Thanos</li>
+      <li>Galactus</li>
       <li>unjustice</li>
       <li>limits</li>
     </ol>
